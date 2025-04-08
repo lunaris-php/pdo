@@ -14,8 +14,8 @@
         private function __construct() {
             $data = Config::init()->data();
             $dsn = Config::getConnectionString($data);
-            $username = "root";
-            $password = "root";
+            $username = $data["db_user"];
+            $password = $data["db_password"];
 
             try {
                 $this->connection = new DB($dsn, $username, $password);
