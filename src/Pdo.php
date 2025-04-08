@@ -44,6 +44,9 @@
                 case "SELECT" :
                     $query->setData($stmt->fetchAll(DB::FETCH_ASSOC));
                     break;
+                case "SHOW" :
+                    $query->setData($stmt->fetchAll(DB::FETCH_ASSOC));
+                    break;
                 case "INSERT" :
                     $query->setId(self::getInstance()->lastInsertId());
                     break;
