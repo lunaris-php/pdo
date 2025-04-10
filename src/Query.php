@@ -46,4 +46,8 @@
         public function getAffectedRows() {
             return $this->affectedRows;
         }
+
+        public function count() {
+            return count($this->data);
+        }
     }
